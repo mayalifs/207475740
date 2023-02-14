@@ -1,0 +1,277 @@
+:root{
+  --pink: rgb(240, 128, 128);
+  --headcolor:  #b18bb7;
+  --bej: rgb(213, 213, 148);
+  --black: #222;
+  --gold: gold;
+  --hover: rgba(0, 0, 0, 0.6);
+}
+
+.body2{
+
+background-color: #cabdca;
+background-repeat: no-repeat;
+background-size: cover;
+font-family:myFirstFont ;
+color:white;
+animation: fadeIn 5s;
+}
+/* animation for opening pages */
+@keyframes fadeIn {
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 2;}
+}
+
+.container1::after {
+content: '';
+display: table;
+clear: both;
+}
+
+.logo {
+float: left;
+margin-left: 50px ;
+font-family: mySecondFont;
+font-size: 50px;
+color: var(--headcolor);
+margin-top: 15px;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../static/Sriracha-Regular.ttf)
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(../static/TitanOne-Regular.ttf);
+}
+
+.BrowserDiv{
+display: grid;
+grid-template-areas:
+'nav1 '
+'tohen' 'theTable'
+;
+}
+
+/* Small Screen */
+@media only screen and (max-width: 600px) {
+:root{
+  --headcolor:  white;
+}
+.BrowserDiv{
+    display: grid;
+    grid-template-areas:
+    'nav1'
+    'tohen '
+    'theTable'
+    ;
+}
+.homeGrid{
+  display: grid;
+  grid-template-areas:
+  'nav'
+  'buttons'
+  'we'
+}
+}
+
+.nav_grid{
+grid-area: nav;
+}
+.buttons_grid{
+grid-area: buttons;
+}
+.WhoAreWe_grid{
+grid-area: we;
+}
+.TBNav{
+grid-area: nav1;
+}
+.tohen{
+grid-area: tohen;
+}
+.Table{
+grid-area: theTable;
+}
+
+/* Nav Bar */
+.active {
+color: var(--black);
+background-color:var(--headcolor);
+border-radius: 4px;
+}
+nav {
+float: left;
+}
+nav li {
+display: inline-block;
+margin-left:30px;
+padding-top: 25px;
+position: relative;
+}
+nav a {
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 14px;
+padding: 10px;
+}
+nav a:hover {
+color: var(--black);
+background-color:var(--headcolor);
+border-radius: 4px;
+}
+.nav_grid{
+grid-area: nav;
+}
+
+/* The buttons on the main page  */
+.buttonsContainer{
+float: left;
+width: 40%;
+padding: 10px;
+margin-left:100px;
+margin-top: 50px;
+}
+.HomeButton {
+text-decoration: none;
+align-items: center;
+background-color: #e3fef3;
+border: 2px solid #111;
+border-radius: 8px;
+box-sizing: border-box;
+color: #111;
+cursor: pointer;
+display:flex;
+font-size: 16px;
+height: 48px;
+justify-content: center;
+line-height: 24px;
+position: relative;
+text-align: center;
+touch-action: manipulation;
+width: 200px;
+font-family:  myFirstFont;
+}
+#upper{
+margin-bottom: 100px;
+}
+.HomeButton a {
+color: var(--gray);
+text-decoration: none;
+}
+.HomeButton:after {
+background-color: #111;
+border-radius: 8px;
+content: "";
+display: block;
+height: 48px;
+left: 0;
+width: 100%;
+position: absolute;
+top: -2px;
+transform: translate(8px, 8px);
+transition: transform .2s ease-out;
+z-index: -1;
+}
+.HomeButton:hover:after {
+transform: translate(0, 0);
+}
+.HomeButton:active {
+background-color: #fbdaff;
+outline: 0;
+}
+
+/* The body */
+.tohen {
+float:left;
+width: 50%;
+font-size: large;
+margin-left: 40px;
+position: relative;
+
+}
+/* WhoAreWe on the right on the main page */
+.WhoAreWe {
+margin-top: 10px;
+margin-right: 0px;
+color: white;
+display: flow-root;
+text-align: start;
+font-size: large;
+background-color:rgba(0, 0, 0, 0.7);
+border-radius: 15px;
+padding-left: 50px;
+margin-right: 100px;
+}
+/* All the bottens in the body */
+.BTNS{
+padding: 0.5em 0.5em;
+font-size: 16px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: #000;
+background-color: var(--headcolor);
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.5s ease 0s;
+cursor: pointer;
+outline: none;
+font-family: myFirstFont;
+margin-top: 60px;
+margin-left: 90px;
+margin-bottom: 70px;
+}
+.BTNS:hover {
+background-color: #421b3c;
+box-shadow: 0px 15px 20px rgba(180, 131, 165, 0.4);
+color: whitesmoke;
+transform: translateY(-5px);
+}
+
+.BTN{
+padding: 0.5em 0.5em;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: rgb(46, 22, 46);
+background-color: var(--headcolor);
+border: none;
+border-radius: 15px;
+font-family: myFirstFont;
+cursor: pointer;
+font-size: 10px;
+}
+.BTN:hover{
+color: black;
+}
+/* Ticket browser page */
+#findtickets{
+margin-top: 10px;
+margin-left: 10px;
+border-radius: 20px;
+}
+
+/* sign in fields*/
+.input_field {
+  margin-bottom: 2px;
+  margin-top: 2px ;
+  height: 2px;
+  background-color: #cabdca;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  font-family:  myFirstFont;
+  width: 170px;
+  height: 30px;}
+
+table, th, td {
+border: 2px solid;
+width: 50%;
+background-color: #303b37;
+text-align: center;
+}
