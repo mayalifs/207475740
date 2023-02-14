@@ -1,0 +1,58 @@
+extend Layout
+block content
+    title Add a New Place
+    form.addPlaceForm(action="/addPlace", method="post")
+      h4 Adding a new place
+      br
+      p
+        | Please fill in this form to add a new place :)
+      hr
+      .msg
+      label(for="place_name")
+        b Name
+      input#place_name.input(type="text", placeholder="Enter place name", name="place_name", required)
+      label(for="street_name")
+        b Street name
+      input#street_name.input(type="text", placeholder="Enter street name", name="street_name", required)
+      label(for="street_number")
+        b Street number
+      input#street_number.input(type="text", placeholder="Enter street number", name="street_number", required)
+      label(for="city")
+        b City
+      #DropDown
+        select#city.input(type="text", placeholder="Select city", name="city", required)
+          option(value="Haifa") Haifa, Israel
+          option(value="Tel Aviv") Tel Aviv, Israel
+          option(value="Herzliya") Herzliya, Israel
+          option(value="Modiin") Modiin, Israel
+          option(value="Beer Sheva") Beer Sheva, Israel
+          option(value="Ramat Gan") Ramat Gan, Israel
+          option(value="Jerusalem") Jerusalem, Israel
+          option(value="Eilat") Eilat, Israel
+      label(for="google_site")
+        b Google site
+      input#google_site.input(type="url", placeholder="https://vdine.com/", name="google_site", size="30", required)
+      label
+        b Open hours
+      .OpenH
+        label(for="openHSunThur") Sunday-Thursday:
+        input#openHSunThur(type="time", name="openHSunThur")
+        input#closeHSunThur(type="time", name="closeHSunThur")
+        br
+        label(for="openHFri") Friday:
+        input#openHf(type="time", name="openHFri")
+        input#closeHFri(type="time", name="closeHFri")
+        br
+        label(for="openHSat") Saturday:
+        input#closed(type="checkbox", name="closed")
+        | Closed
+        br
+        input#openHSat.saturday(type="time", name="openHSat")
+        input#closeHSat.saturday(type="time", name="closeHSat")
+        br
+      label(for="contact_number")
+        b Contact number
+      input#contact_number.input(type="tel", placeholder="000-0000000 / 00-0000000", name="contact_number", size="10", required)
+      br
+      div
+        button#add.button(type="submit", onclick="topFunction()") Add

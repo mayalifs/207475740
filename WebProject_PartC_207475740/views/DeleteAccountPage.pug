@@ -1,0 +1,14 @@
+extend Layout
+block content
+    title User Profile
+    form.userProfileForm(action="/DeleteAccountPage", method="post")
+      h4 Delete Account
+      br
+      div
+        | Enter username and press Delete Account in order to delete your details
+        hr
+        label(for="username")
+            b User Name
+        input#username.input(type="text", placeholder="Enter user name", name="username", required)
+        br
+        input#deleteAccount.button(type="submit", value="Delete Account")

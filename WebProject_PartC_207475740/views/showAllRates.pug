@@ -1,0 +1,23 @@
+extends Layout
+block content
+    title All Rates
+    div
+      h3 #{v1}
+      br
+      table.Table
+        tr
+            th place_name
+            th cleanliness
+            th FQuality
+            th SQuality
+            th VForMoney
+            th review
+            
+        each n in RATES
+            tr
+            td= n.place_name
+            td= n.cleanliness
+            td= n.FQuality
+            td= n.SQuality
+            td= n.VForMoney
+            td= n.review
